@@ -1,4 +1,4 @@
-s1 = {1, 5, 8} # set of integers
+s1 = {1, 5, 8} # set of integers.
 s2 = {10, 2, 8, 1, 11,8} # set of integers with duplicate values (8 is repeated)
 s3 =  {} # this creates an empty dictionary, not a set. To create an empty set, use set() instead.
 s4 = set() # this creates an empty set. It is the correct way to create an empty set in Python.
