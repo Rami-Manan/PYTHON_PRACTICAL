@@ -1,2 +1,2 @@
-for x in "Patel web solution":
-    print(x)
+for x in "Patel web solution": # Start a for loop that iterates over each character in the string "Patel web solution"
+    print(x) # Inside the loop, print the current character (x) being iterated over

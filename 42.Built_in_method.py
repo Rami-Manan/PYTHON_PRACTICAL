@@ -1,5 +1,5 @@
-s1 = "Ramesh"
-l = [1, 2, 3, 4, 5]
+s1 = "Ramesh" # Create a string s1 with the value "Ramesh"
+l = [1, 2, 3, 4, 5] # Create a list l with the elements 1, 2, 3, 4, and 5
 
 length_s1 = len(s1) # length of string
 length_l = len(l) # length of list

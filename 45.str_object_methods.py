@@ -1,4 +1,4 @@
-s1 = "Ramesh"
+s1 = "Ramesh"# Create a string s1 with the value "Ramesh"
 
 # String Methods
 print(s1.index("a"))  # Find the index of 'a'
