@@ -1,4 +1,4 @@
-s1 = {60, 30, 40, 20, 10, 70, 90, 50, 80, 100} # set of integers
+s1 = {60, 30, 40, 20, 10, 70, 90, 50, 80, 100} # set of integers.
 
 print(len(s1)) # prints the number of elements in the set
 print(max(s1)) # prints the maximum value in the set
