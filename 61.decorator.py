@@ -1,0 +1,21 @@
+def decor_result(result_func): # This defines a decorator function called decor_result that takes a function result_func as an argument. A decorator is a function that takes another function and extends its behavior without explicitly modifying it.
+    def distinction(marks): # This defines an inner function called distinction that takes marks as an argument. This function will be the one that is returned by the decorator and will have access to the result_func passed to the decorator.
+        for m in marks: # This loop iterates through each mark in the marks list.+
+            if m > 75: # If the mark is greater than 75, it will print "Distinction". This means that if any mark in the list is greater than 75, the student will be considered to have achieved a distinction.
+                print("Distinction") # If the condition is met, it will print "Distinction" and the loop will continue to check the next marks. If any mark is not greater than 75, it will break out of the loop and call the original result function with the marks.
+            else: # If the mark is not greater than 75, it will break out of the loop and call the original result function with the marks. This means that if any mark is not greater than 75, the student will not be considered to have achieved a distinction, and the original result function will be called to determine if they pass or fail.
+                result_func(marks) # This line calls the original result function (result_func) with the marks as an argument. This allows the original functionality of determining pass or fail to be executed if the distinction condition is not met.
+    return distinction # This line returns the inner function distinction, which is the decorated version of the original result function. When the result function is called, it will now execute the logic defined in the distinction function, which includes checking for distinctions before determining pass or fail.
+@decor_result      # This line applies the decor_result decorator to the result function. This means that when the result function is called, it will first execute the logic defined in the decor_result decorator (which checks for distinctions) before executing the original logic of determining pass or fail.
+def result(marks): # This defines the original result function that takes marks as an argument. This function will determine if the student has passed or failed based on their marks. 
+    for m in marks: # This loop iterates through each mark in the marks list. 
+        if m > 33: #  If the mark is greater than 33, it will continue to check the next marks. This means that if all marks are greater than 33, the student will be considered to have passed.
+            pass # If the condition is met, it will do nothing and continue to check the next marks. If any mark is not greater than 33, it will break out of the loop and print "Fail".
+        else:  # If the mark is not greater than 33, it will break out of the loop and print "Fail". This means that if any mark is not greater than 33, the student will be considered to have failed.
+            print("Fail")
+            break # If the condition is not met, it will print "Fail" and break out of the loop, which means that the function will stop checking the remaining marks and will not print "Pass" even if the remaining marks are greater than 33.
+    else: # This else block is associated with the for loop. It will be executed if the for loop completes without encountering a break statement. This means that if all marks are greater than 33, it will print "Pass".
+        print("Pass") # If the for loop completes without breaking, it will print "Pass", indicating that the student has passed based on their marks.
+        
+        
+result([50, 90, 46, 80, 60]) # This line calls the result function with a list of marks [50, 90, 46, 80, 60]. The result function will first execute the logic defined in the decor_result decorator to check for distinctions. Since there are marks greater than 75 (90 and 80), it will print "Distinction". Then it will execute the original logic of the result function to determine if the student has passed or failed. Since all marks are greater than 33, it will print "Pass". The final output will be:

@@ -1,0 +1,4 @@
+from functools import reduce
+
+x = reduce (lambda a,b: a+b, [1,2,3,4]) # This uses the reduce function to apply a lambda function that adds two elements (a and b) to the list [1,2,3,4]. The result is the sum of all the elements in the list.
+print(x) # This will print 10 because the reduce function takes the first two elements of the list (1 and 2), applies the lambda function to them (1+2=3), then takes the result (3) and the next element (3) and applies the lambda function again (3+3=6), then takes the result (6) and the next element (4) and applies the lambda function again (6+4=10). The final result is 10, which is printed.
